@@ -7,8 +7,8 @@ app_license = "mit"
 # required_apps = []
 
 # Includes in <head>
-# ------------------
-
+# ------------------ vivek kumbhar
+# ----
 # include js, css files in header of desk.html
 # app_include_css = "/assets/quantbit_machineshop_erp/css/quantbit_machineshop_erp.css"
 # app_include_js = "/assets/quantbit_machineshop_erp/js/quantbit_machineshop_erp.js"
