@@ -1,5 +1,5 @@
 app_name = "quantbit_machineshop_erp"
-app_title = "Quanbit MachineShop ERP"
+app_title = "Quantbit MachineShop ERP"
 app_publisher = "Quantbit Technlogies Pvt Ltd"
 app_description = "Our cutting-edge Quanbit_MachineShop_ERP is designed to revolutionize the way machine shops manage their operations. Tailored specifically for the unique needs of the machine shop industry, this comprehensive ERP solution integrates all aspects of machine shop management into a single, user-friendly platform."
 app_email = "support@quantbit.io"
