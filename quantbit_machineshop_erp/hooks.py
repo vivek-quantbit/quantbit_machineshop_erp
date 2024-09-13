@@ -226,3 +226,11 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+doctype_js = {
+    # "Pattern Master": "public/js/filter.js",
+    # "Grade Master": "public/js/filter.js",
+    # "Operator Master": "public/js/filter.js",
+    # "Supervisor Master": "public/js/filter.js",
+    "MachineShop Filter Setting": "public/js/filter.js",
+    "MachineShop Operator Master":"public/js/filter.js"
+}

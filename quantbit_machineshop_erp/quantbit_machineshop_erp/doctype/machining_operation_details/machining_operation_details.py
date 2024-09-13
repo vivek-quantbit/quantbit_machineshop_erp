@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class MachineType(Document):
+class MachiningOperationDetails(Document):
 	pass

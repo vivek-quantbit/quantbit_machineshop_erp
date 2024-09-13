@@ -1,0 +1,190 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-04 14:29:31.823271",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "machine",
+  "item",
+  "finished_item_name",
+  "mr_qty",
+  "or1_qty",
+  "column_break_h1zqt",
+  "machine_type",
+  "cycle_time",
+  "available_quantity",
+  "cr_qty",
+  "or2_qty",
+  "column_break_uigzn",
+  "operation",
+  "source_warehouse",
+  "operation_name",
+  "ok_qty",
+  "earning_min",
+  "column_break_wffp5",
+  "operation_rate",
+  "boring",
+  "raw_item_code",
+  "rw_qty",
+  "raw_item_name",
+  "total_quantity"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Finished Item Code",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "item.item_name",
+   "fieldname": "finished_item_name",
+   "fieldtype": "Data",
+   "label": "Finished Item Name"
+  },
+  {
+   "fieldname": "column_break_h1zqt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "machine",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Machine Name",
+   "options": "MachineShop Machine",
+   "reqd": 1
+  },
+  {
+   "fieldname": "machine_type",
+   "fieldtype": "Link",
+   "label": "Machine type",
+   "options": "MachineShop Machine Type"
+  },
+  {
+   "columns": 1,
+   "fieldname": "cycle_time",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Cycle Time",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_uigzn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "fieldname": "operation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Operation Code",
+   "options": "MachineShop Operation",
+   "reqd": 1
+  },
+  {
+   "columns": 2,
+   "fetch_from": "operation.operation",
+   "fieldname": "operation_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Operation Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_wffp5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "operation_rate",
+   "fieldtype": "Float",
+   "label": "Operation Rate"
+  },
+  {
+   "fieldname": "boring",
+   "fieldtype": "Float",
+   "label": "boring"
+  },
+  {
+   "fieldname": "raw_item_code",
+   "fieldtype": "Link",
+   "label": "Raw Item Code",
+   "options": "Item"
+  },
+  {
+   "fetch_from": "item.item_name",
+   "fieldname": "raw_item_name",
+   "fieldtype": "Data",
+   "label": "Raw Item Name"
+  },
+  {
+   "fieldname": "ok_qty",
+   "fieldtype": "Float",
+   "label": "OK QTY"
+  },
+  {
+   "fieldname": "cr_qty",
+   "fieldtype": "Float",
+   "label": "CR QTY"
+  },
+  {
+   "fieldname": "mr_qty",
+   "fieldtype": "Float",
+   "label": "MR QTY"
+  },
+  {
+   "fieldname": "rw_qty",
+   "fieldtype": "Float",
+   "label": "RW QTY"
+  },
+  {
+   "fieldname": "or1_qty",
+   "fieldtype": "Float",
+   "label": "OR1 QTY"
+  },
+  {
+   "fieldname": "or2_qty",
+   "fieldtype": "Float",
+   "label": "OR2 QTY"
+  },
+  {
+   "fieldname": "source_warehouse",
+   "fieldtype": "Link",
+   "label": "Source Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "available_quantity",
+   "fieldtype": "Float",
+   "label": "Available Quantity"
+  },
+  {
+   "fieldname": "earning_min",
+   "fieldtype": "Float",
+   "label": "Earning Min."
+  },
+  {
+   "fieldname": "total_quantity",
+   "fieldtype": "Float",
+   "label": "Total Quantity"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-09-04 14:56:40.155400",
+ "modified_by": "Administrator",
+ "module": "Quantbit MachineShop ERP",
+ "name": "Machining Operation Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
