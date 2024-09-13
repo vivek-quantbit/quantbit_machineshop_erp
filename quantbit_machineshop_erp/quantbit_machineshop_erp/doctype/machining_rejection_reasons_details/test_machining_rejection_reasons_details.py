@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestMachineType(FrappeTestCase):
+class TestMachiningRejectionReasonsDetails(FrappeTestCase):
 	pass

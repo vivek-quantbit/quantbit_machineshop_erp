@@ -1,0 +1,267 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-04 14:20:22.205439",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "date",
+  "posting_time",
+  "column_break_2jl4x",
+  "supervisor",
+  "operator",
+  "column_break_y1py8",
+  "supervisor_name",
+  "operator_name",
+  "column_break_gvuyd",
+  "shift_time",
+  "required_time",
+  "column_break_pgxlt",
+  "wages",
+  "ready_to_downstream",
+  "is_job_order_applicable",
+  "do_not_delete",
+  "section_break_tfgrr",
+  "machining_finished_item_details",
+  "column_break_em55u",
+  "machining_operation_details",
+  "section_break_tnkpx",
+  "total_qty",
+  "column_break_ia6pd",
+  "total_earned_minutes",
+  "column_break_bkgdk",
+  "time_difference",
+  "section_break_tzizq",
+  "rejected_items_reasons",
+  "section_break_bnvja",
+  "remaining_reasonable_time",
+  "downtime_reason_details",
+  "production_additional_cost_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "posting_time",
+   "fieldtype": "Time",
+   "label": "Posting Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2jl4x",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "supervisor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Supervisor ID",
+   "options": "Supervisor Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "operator",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Operator ID",
+   "options": "Operator Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_y1py8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "supervisor.supervisor_name",
+   "fieldname": "supervisor_name",
+   "fieldtype": "Data",
+   "label": "Supervisor Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "operator.operator_name",
+   "fieldname": "operator_name",
+   "fieldtype": "Data",
+   "label": "Operator Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_gvuyd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "8 Hours 1 shift",
+   "fieldname": "shift_time",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Shift Time",
+   "options": "MachineShop Shift",
+   "reqd": 1
+  },
+  {
+   "default": "480",
+   "fetch_from": "shift_time.minutes",
+   "fieldname": "required_time",
+   "fieldtype": "Float",
+   "label": "Required Time"
+  },
+  {
+   "fieldname": "column_break_pgxlt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "wages",
+   "fieldtype": "Currency",
+   "label": "Wages",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "ready_to_downstream",
+   "fieldtype": "Check",
+   "label": "Ready To Downstream",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_job_order_applicable",
+   "fieldtype": "Check",
+   "label": "Is Job Order Applicable"
+  },
+  {
+   "fieldname": "do_not_delete",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Do Not Delete",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_tfgrr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "columns": 2,
+   "fieldname": "machining_finished_item_details",
+   "fieldtype": "Table",
+   "in_standard_filter": 1,
+   "label": "Machining Finished Item Details",
+   "options": "Machining Finished Item Details",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_em55u",
+   "fieldtype": "Section Break"
+  },
+  {
+   "columns": 2,
+   "fetch_from": "item.raw_material",
+   "fieldname": "machining_operation_details",
+   "fieldtype": "Table",
+   "label": "Machining Operation Details",
+   "options": "Machining Operation Details",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_tnkpx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_qty",
+   "fieldtype": "Float",
+   "label": "Total Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ia6pd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_earned_minutes",
+   "fieldtype": "Float",
+   "label": "Total Earned Minutes",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_bkgdk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "time_difference",
+   "fieldtype": "Float",
+   "label": "Time Difference",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_tzizq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rejected_items_reasons",
+   "fieldtype": "Table",
+   "ignore_user_permissions": 1,
+   "label": "Machining Rejection Reasons Details",
+   "options": "Machining Rejection Reasons Details"
+  },
+  {
+   "fieldname": "section_break_bnvja",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remaining_reasonable_time",
+   "fieldtype": "Float",
+   "label": "Remaining Reasonable Time"
+  },
+  {
+   "fieldname": "downtime_reason_details",
+   "fieldtype": "Table",
+   "label": "Machining Downtime Reasons Details",
+   "options": "Machining Downtime Reasons Details"
+  },
+  {
+   "fieldname": "production_additional_cost_details",
+   "fieldtype": "Table",
+   "label": "Machining Additional Cost Details",
+   "options": "Machining Additional Cost Details"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-09-04 17:01:06.653755",
+ "modified_by": "Administrator",
+ "module": "Quantbit MachineShop ERP",
+ "name": "Machining",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
